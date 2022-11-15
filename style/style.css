@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1rem;
+  padding-right: 2rem;
+}
+#header .title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#header .title img {
+  width: 3rem;
+}
+#header .title h2 {
+  margin-left: 0.5rem;
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#cards-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 0 1 7%;
+  height: 8vw;
+  border: 2px solid rgb(202, 200, 200);
+  margin: 4px;
+}
+#cards-container .card :last-child {
+  transform: rotate(180deg);
+}
+#cards-container .card img {
+  max-width: 30%;
+  align-self: center;
+}
+#cards-container .card p {
+  margin: 0;
+  padding: 0 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+#cards-container .back {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cards-container .paired {
+  background-color: rgb(180, 173, 173);
+}
+#cards-container .wrong {
+  -webkit-animation: wrongPaired 0.2s 5;
+          animation: wrongPaired 0.2s 5;
+}
+
+div#complete {
+  position: absolute;
+  z-index: 999;
+  top: 30vh;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-animation: completeGame 0.75s forwards;
+          animation: completeGame 0.75s forwards;
+}
+div#complete h3 {
+  font-size: 2rem;
+}
+div#complete p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+div#complete #retryBtn {
+  padding: 0.1rem;
+  margin-right: 0.5rem;
+}
+div#complete #retryBtn i {
+  pointer-events: none;
+}
+div#complete span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@-webkit-keyframes wrongPaired {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+@keyframes wrongPaired {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+@-webkit-keyframes completeGame {
+  from {
+    background-color: rgba(127, 240, 255, 0.363);
+    transform: scale(0);
+  }
+  to {
+    background-color: rgba(127, 240, 255, 0.911);
+    transform: scale(1);
+  }
+}
+@keyframes completeGame {
+  from {
+    background-color: rgba(127, 240, 255, 0.363);
+    transform: scale(0);
+  }
+  to {
+    background-color: rgba(127, 240, 255, 0.911);
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
